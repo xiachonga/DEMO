@@ -1,0 +1,50 @@
+#配置程序端口，默认为8080
+# 配置默认访问路径，默认为/
+server:
+  port: 8080
+  servlet:
+    context-path: /demo
+    
+mybatis:
+#资源文件夹，类似项目前两个都叫classpath
+  mapperLocations: classpath:mapper/**/*.xml
+  #必须配置
+  typeAliasesPackage: com.example.model
+  #类型别名所在包，后面resultMap就不需要写全类名了。
+  
+spring:
+  datasource:
+  #加载驱动，驱动是在连接的jar包里面的。
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: zc666.
+    url: jdbc:mysql://localhost:3306/st_jsp?useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=Hongkong
+    #时区是必不可少了（新版驱动要求必须）
+    username: root
+  mvc:
+    view:
+      prefix: /test/
+      suffix: .jsp
+#Springmvc视图转换视图解析
+
+#  redis:
+#      host: 127.0.0.1
+#      database: 1
+#      port: 6379
+#      password: 123456
+#      timeout: 1s
+#      jedis:
+#        pool:
+#          max-active: 20
+#          max-idle: 20
+#          min-idle: 10
+#          max-wait: -1ms
+#  cache:
+#    redis:
+
+#      use-key-prefix: true
+#      key-prefix: dev
+#      cache-null-values: false
+#      time-to-live: 20s     
+
+
+      

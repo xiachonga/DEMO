@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/demo/js/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+code:<input id="name" value="">
+<button onclick="testAjax()">test</button>
+<script type="text/javascript">
+var testAjax = function(){
+	 $.ajax({
+		 type:"get",
+		 url:"/demo/user/login2",
+		 dataType:"text",
+		 data:{
+			code:$("#name").val()
+		 },
+	   success:function(data){
+		   alert(data)
+	   }
+	   
+	   })
+	
+}
+</script>
+</body>
+</html>
